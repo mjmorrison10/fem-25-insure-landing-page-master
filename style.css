@@ -124,12 +124,28 @@ nav {
   );
   font-weight: var(--fw-Karla-bold);
   text-transform: uppercase;
+  transition: 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.header-menu li:hover {
+  color: var(--color-Dark-Violet);
 }
 
 #header-menu-btn {
   border: 2px solid var(--color-Dark-Violet);
   padding: 0.5rem 1.5rem;
   color: var(--color-Dark-Violet);
+  transition: 250ms ease-in-out;
+}
+
+#header-menu-btn:hover {
+  background-color: var(--color-Dark-Violet);
+  color: var(--color-Very-Light-Gray);
+}
+
+.menu-bar {
+  display: none;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////// */
@@ -175,6 +191,9 @@ nav {
   position: relative;
 }
 
+.headline-text {
+  z-index: 2;
+}
 .headline-text h1 {
   font-size: var(--font-size-x40-large);
   font-family: var(--ff-DM-Serif-Display);
@@ -204,6 +223,13 @@ nav {
   padding: 0.5rem 1.5rem;
   color: var(--color-Very-Light-Gray);
   text-transform: uppercase;
+  transition: 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--color-Very-Light-Gray);
+  color: var(--color-Dark-Violet);
 }
 
 .headline-img {
@@ -282,6 +308,7 @@ nav {
 .about-container p {
   color: var(--color-Dark-Grayish-Violet);
   max-width: 37ch;
+  margin-bottom: 5rem;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////// */
@@ -321,6 +348,7 @@ footer {
   background-image: url(./images/bg-pattern-footer-desktop.svg);
   background-repeat: no-repeat;
   background-position: top left;
+  position: relative;
 }
 
 .footer-wrapper {
@@ -345,6 +373,12 @@ footer {
 .social-media-icons i {
   color: var(--color-Dark-Grayish-Violet);
   font-size: var(--font-size-x5-large);
+  transition: 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.social-media-icons i:hover {
+  color: var(--color-Dark-Violet);
 }
 
 .social-media-icons i + i {
@@ -372,5 +406,236 @@ footer {
 .footer-link li {
   font-weight: var(--fw-Karla-bold);
   margin: 1rem 0;
+  transition: 250ms ease-in-out;
+  cursor: pointer;
 }
 
+.footer-link li:hover {
+  text-decoration: underline;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* Media Queries ////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 1225px) {
+  .headline-text {
+    padding-right: 1rem;
+  }
+  .headline-text h1 {
+    margin-top: 10rem;
+    font-size: var(--font-size-x30-large);
+  }
+}
+
+@media (max-width: 1050px) {
+  .headline-btn {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    --wrapper: 95%;
+  }
+
+  .header-menu {
+    /* display: none; */
+    background-color: var(--color-Dark-Violet);
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin-top: 2rem;
+    justify-content: flex-start;
+    background-image: url(./images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+  }
+
+  #header-menu-btn {
+    background-color: transparent;
+    border: 1px solid var(--color-Very-Light-Gray);
+    padding: 0.5rem 1.5rem;
+    color: var(--color-Very-Light-Gray);
+  }
+
+  .header-menu li {
+    color: var(--color-Very-Light-Gray);
+    margin: 1rem 0;
+    margin-top: 3rem;
+  }
+
+  nav {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  nav .insure-logo {
+    margin-left: 1rem;
+  }
+
+  .menu-bar {
+    display: flex;
+    border: 1px solid var(--color-Dark-Violet);
+    padding: 0.5rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+
+  .menu-bar i {
+    font-size: var(--font-size-x5-large);
+  }
+
+  .wrapper {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .headline-img {
+    width: 100%;
+  }
+  .headline-img img {
+    margin: 0;
+    object-fit: cover;
+  }
+
+  .headline-text {
+    width: var(--wrapper);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headline-text h1 {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  .headline-text p {
+    text-align: center;
+  }
+
+  .headline-btn {
+    margin-bottom: 5rem;
+  }
+
+  .headline-text {
+    position: relative;
+  }
+
+  .headline::before {
+    display: none;
+  }
+
+  .headline-text {
+    padding-right: 0px;
+  }
+  .headline-text::before {
+    content: "";
+    background-image: url(./images/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    top: 0;
+    right: 0;
+    left: -10%;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .headline-text h1::before {
+    display: none;
+  }
+
+  .headline::after {
+    background-image: url(./images/bg-pattern-intro-right-mobile.svg);
+    background-position: bottom right;
+    bottom: -15rem;
+    width: 100%;
+    height: 100%;
+    top: inherit;
+  }
+
+  .about-us {
+    padding-top: var(--headline-padding);
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-us h1 {
+    font-size: var(--font-size-x25-large);
+  }
+
+  .about-us h1::before {
+    width: auto;
+    left: 20%;
+    right: 20%;
+  }
+
+  .about-info {
+    flex-direction: column;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .banner {
+    background-image: url(./images/bg-pattern-intro-right-mobile.svg);
+    background-position: top -100px right 0%;
+    background-size: 8.5rem;
+    flex-direction: column;
+    padding: 4rem 1rem;
+  }
+
+  .banner-text {
+    font-size: var(--font-size-x30-large);
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    background-image: url(./images/bg-pattern-footer-mobile.svg);
+    background-position: top;
+    background-size: contain;
+    padding-bottom: 5rem;
+  }
+
+  .footer-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .insure-logo {
+    margin: 2rem 0;
+  }
+
+  .social-media-icons {
+    margin: 1rem 0;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
