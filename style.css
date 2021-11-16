@@ -1,0 +1,36 @@
+:root {
+  /* ### Primary */
+
+  --color-Dark-Violet: hsl(256, 26%, 20%);
+  --Dark-Violet-Hue: 256;
+  --Dark-Violet-Sat: 26%;
+  --Dark-Violet-Light: 20%;
+
+  --color-Grayish-Blue: hsl(216, 30%, 68%);
+  --Grayish-Blue-Hue: 216;
+  --Grayish-Blue-Sat: 30%;
+  --Grayish-Blue-Light: 68%;
+
+  /* ### Neutral */
+
+  --color-Very-Dark-Violet: hsl(270, 9%, 17%);
+  --Very-Dark-Violet-Hue: 270;
+  --Very-Dark-Violet-Sat: 9%;
+  --Very-Dark-Violet-Light: 17%;
+
+  --color-Dark-Grayish-Violet: hsl(273, 4%, 51%);
+  --Dark-Grayish-Violet-Hue: 273;
+  --Dark-Grayish-Violet-Sat: 4%;
+  --Dark-Grayish-Violet-Light: 51%;
+
+  --color-Very-Light-Gray: hsl(0, 0%, 98%);
+  --Very-Light-Gray-Hue: 0;
+  --Very-Light-Gray-Sat: 0%;
+  --Very-Light-Gray-Light: 98%;
+
+  --ff-DM-Serif-Display: "DM Serif Display", serif;
+  --ff-Karla: "Karla", sans-serif;
+
+  --fw-normal: 400;
+  --fw-Karla-bold: 700;
+}
