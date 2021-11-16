@@ -309,6 +309,9 @@ nav {
   color: var(--color-Dark-Grayish-Violet);
   max-width: 37ch;
   margin-bottom: 5rem;
+
+
+
 }
 
 /* //////////////////////////////////////////////////////////////////////////////// */
@@ -452,7 +455,7 @@ footer {
   }
 
   .header-menu {
-    /* display: none; */
+    display: none;
     background-color: var(--color-Dark-Violet);
     flex-direction: column;
     width: 100%;
